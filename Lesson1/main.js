@@ -16,8 +16,6 @@ let c2 = false;
 
 let full = `${a1} ${a2}` + "." + a3 + "." + a4;
 
-// let full = `My name is ${a1}, surname: ${a2} and house number is ${a3}`;
-
 console.log(full);
 
 console.log(b1);
@@ -30,3 +28,23 @@ console.log(b7);
 
 console.log(c1);
 console.log(c2);
+
+let firstName = "Frederico";
+let middleName = "Lajerto";
+let lustNName = "Rodriguez"
+
+let person = `${firstName} ${middleName} ${lustNName}`;
+console.log(person);
+
+let a = 100;
+let b = "100";
+let c = true;
+
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+
+let name = prompt("Ім'я");
+let name0 = prompt("По-Батькові");
+let age = prompt("Вік");
+console.log(name, name0, age);
