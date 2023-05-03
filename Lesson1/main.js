@@ -46,5 +46,5 @@ console.log(typeof c);
 
 let name = prompt("Ім'я");
 let name0 = prompt("По-Батькові");
-let age = prompt("Вік");
+let age = +prompt("Вік");
 console.log(name, name0, age);
