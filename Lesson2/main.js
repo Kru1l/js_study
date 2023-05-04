@@ -203,6 +203,9 @@ if (coursesAndDurationArray[4].monthDuration > 5) {
 if (coursesAndDurationArray[5].monthDuration > 5) {
     console.log('Frontend Super!');
 }
-
+/*--------------------Варіант2-----------------------*/
+if (coursesAndDurationArray[0].monthDuration > 5 || coursesAndDurationArray[1].monthDuration > 5 || coursesAndDurationArray[2].monthDuration > 5 || coursesAndDurationArray[3].monthDuration > 5 || coursesAndDurationArray[4].monthDuration > 5 || coursesAndDurationArray[5].monthDuration > 5) {
+    console.log('Super!');
+}
 
 
