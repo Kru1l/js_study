@@ -30,30 +30,30 @@ let book_4 = {
     title: 'IT',
     pageCount: 296,
     genre: 'horror',
-    authors: {
-        name: 'Stephen King',
-        age: 75
-    }
+    authors: [
+        {name: 'Stephen King'},
+        {age: 75},
+    ]
 }
 
 let book_5 = {
     title: 'Harry Potter',
     pageCount: 450,
     genre: 'fantasy',
-    authors: {
-        name: 'Joanne Rowling',
-        age: 57
-    }
+    authors: [
+        {name: 'Joanne Rowling'},
+        {age: 57},
+    ]
 }
 
 let book_6 = {
     title: 'A Song of Ice and Fire',
     pageCount: 600,
     genre: 'fantasy',
-    authors: {
-        name: 'George Martin',
-        age: 74
-    }
+    authors: [
+        {name: 'George Martin'},
+        {age: 74},
+    ]
 }
 
 // - Створити масив з 10 об'єктами, які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
@@ -207,5 +207,3 @@ if (coursesAndDurationArray[5].monthDuration > 5) {
 if (coursesAndDurationArray[0].monthDuration > 5 || coursesAndDurationArray[1].monthDuration > 5 || coursesAndDurationArray[2].monthDuration > 5 || coursesAndDurationArray[3].monthDuration > 5 || coursesAndDurationArray[4].monthDuration > 5 || coursesAndDurationArray[5].monthDuration > 5) {
     console.log('Super!');
 }
-
-
