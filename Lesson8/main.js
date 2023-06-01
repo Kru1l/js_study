@@ -122,7 +122,7 @@ let clients = [
     new Client(82, 'Jaf', 'Claud', `jaf_8@gmail.com`, 100, ['g1', 'h6', 'gt7', 'q45', 'b-54']),
     new Client(45, 'Jaf', 'Claud', `jaf_9@gmail.com`, 100, ['g1', 'h6', 'gt7', 'b-54,f-16', 'Bayractar']),
     new Client(36, 'Jaf', 'Claud', `jaf_10@gmail.com`, 100, ['g1', 'h6', 'gt7'])
-];
+]
 console.log(clients);
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
