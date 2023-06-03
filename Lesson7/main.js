@@ -22,10 +22,7 @@ console.log(me);
 let actor = {
     name: 'Kiany',
     movie: 'CDPR',
-    stuntman: {
-        name: 'John',
-        gun: 'P16'
-    },
+    stuntman: {name: 'John', gun: 'P16'},
     shooting() {}
 };
 console.log(actor);
@@ -65,4 +62,5 @@ let gt = structuredClone(nums);
 console.log(gt[0] === nums[0]);
 
 let copy = Object.assign({}, actor);
+console.log(copy);
 console.log(copy.name === actor.name);

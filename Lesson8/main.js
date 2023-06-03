@@ -10,11 +10,11 @@
 // let user1 = new Person('Kiany', 'male', 'guns', 'Julia', 'dead');
 //
 //
-// // Person.prototype.shooting = function () {
-// //     return `Hi, my name is ${this.name}`;
-// // }
+// Person.prototype.shooting = function () {
+//     return `Hi, my name is ${this.name}`;
+// }
 // let user2 = new Person('Johnny', 'male', 'knifes', 'Suyuki', 'alive');
-// // console.log(user1.shooting());
+// console.log(user1.shooting());
 //
 // user2.crying = function () {
 //     return `I'm ${this.name} and I'm crying`;
@@ -29,10 +29,10 @@
 //
 // console.log(user2.crying());
 // console.log(user3.calculating(100, 45));
-// //
-// // let rat = Object.assign(user2);
-// // console.log(rat);
-// //
+//
+// let rat = Object.assign(user2);
+// console.log(rat);
+//
 // class User {
 //     constructor(name, sex) {
 //         this.name = name;
@@ -57,15 +57,15 @@
 //         return super.hug();
 //     }
 // }
-// //
+//
 // function User1(name, sex) {
 //     this.name = name;
 //     this.sex = sex;
 // }
 //
-// // function Customer(name, sex, weapon) {
-// //     User1.apply(this, arguments);
-// // }
+// function Customer(name, sex, weapon) {
+//     User1.apply(this, arguments);
+// }
 //
 // let boy = new Customer('Harry', 'male', 'fork');
 // console.log(boy)
