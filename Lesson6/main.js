@@ -37,7 +37,7 @@ console.log(rock(array));
 // let concat =  yuy.concat(arr);
 // console.log(concat);
 
-//-------------------------------------------------------------------//
+//--------------------------------hw_6----------------------------------//
 
 // - Знайти та вивести довжину настипних стрінгових значень
 // 'hello world', 'lorem ipsum', 'javascript is cool'
@@ -90,7 +90,8 @@ numbers = numbers.map(value => value.toString());
 
 console.log(numbers);
 
-// - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+// - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
+// або навпаки в залежності від значення аргументу direction.
 //     let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]

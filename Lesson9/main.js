@@ -70,8 +70,10 @@ block.style.fontSize = '20px';
 document.body.appendChild(block);
 
 // - клонувати його повністю, та додати клон в body.
-
-
+let cloneBlock = block.cloneNode(true);
+cloneBlock.innerText = 'Abagalamaga';
+document.body.appendChild(cloneBlock);
+const img = document.createElement('img');
 
 // - Є масив:
 let arr = ['Main', 'Products', 'About us', 'Contacts'];
@@ -85,6 +87,8 @@ for (const item of arr) {
 }
 
 // - Є масив
+// Для кожного елементу масиву зробити блок, в якому вивести інформацію про title та monthDuration
+// Завдання робити через цикли.
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
     {title: 'Java Complex', monthDuration: 6},
@@ -93,8 +97,6 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-// Для кожного елементу масиву зробити блок, в якому вивести інформацію про title та monthDuration
-// Завдання робити через цикли.
 for (const item of coursesAndDurationArray) {
     let div = document.createElement('div');
     let p = document.createElement('p');
@@ -129,6 +131,7 @@ for (const item of coursesAndDurationArray_1) {
     div.append(h1, p);
     document.body.appendChild(div);
 }
+
 // ==========================
 
 // - є масив simpsons, котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
@@ -172,20 +175,25 @@ let simpsons = [
     },
 ];
 for (const simpson of simpsons) {
-    let div = document.createElement('div');
+    const hr1 = document.createElement('hr');
+    document.body.appendChild(hr1);
+
+    const div = document.createElement('div');
     div.classList.toggle('member');
 
-    let p = document.createElement('p');
-    p.innerText = simpson.name + ' ' + simpson.surname + ' - ' + simpson.age;
+    const h3 = document.createElement('h3');
+    h3.innerText = simpson.name + ' ' + simpson.surname + ' - ' + simpson.age;
 
-    let p2 = document.createElement('p');
-    p2.innerText = simpson.info;
+    const p = document.createElement('p');
+    p.innerText = simpson.info;
 
-    let img = document.createElement('img');
-    img.setAttribute('scr', simpson.photo);
-    img.setAttribute('alt','');
+    const image = document.createElement('img');
+    // image.setAttribute('scr', simpson.photo);
+    // image.setAttribute('alt', simpson.name);
+    image.src = simpson.photo;
+    image.alt = simpson.name;
 
-    div.append(p, p2, img);
+    div.append(h3, image, p);
     document.body.appendChild(div);
 }
 // =========================
@@ -193,11 +201,11 @@ for (const simpson of simpsons) {
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 let coursesArray = [
     {
-    title: 'JavaScript Complex',
-    monthDuration: 5,
-    hourDuration: 909,
-    modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-},
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
     {
         title: 'Java Complex',
         monthDuration: 6,
@@ -290,7 +298,7 @@ for (const course of coursesArray) {
     modulesDiv.appendChild(list);
 
     for (const item of course.modules) {
-    let li = document.createElement('li');
+        let li = document.createElement('li');
         li.innerText = item;
         list.appendChild(li);
     }

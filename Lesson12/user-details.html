@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Details</title>
+    <style>
+        .list {
+            font-size: 23px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<script>
+
+let url = new URL(location.href);
+let data = url.searchParams.get('data');
+
+const div = document.createElement('div');
+const ul = document.createElement('ul');
+ul.classList.add('list');
+ul.innerText = 'User Details:';
+div.appendChild(ul);
+
+const clearData = data.replace(/[{}"]/g, '').replace(/[:]/g, ': ').split(',');
+
+for (const item of clearData) {
+    const s = item.charAt(0).toUpperCase() + item.slice(1);
+    const li = document.createElement('li');
+    li.innerText = s;
+    ul.appendChild(li);
+}
+document.body.appendChild(div);
+
+// let redactor = (text => {
+//
+//     // const clearText_2 = text.replace(':', ': ');
+//     return clearText.split(',');
+// })
+
+// console.log(redactor(data));
+
+</script>
+</body>
+</html>
