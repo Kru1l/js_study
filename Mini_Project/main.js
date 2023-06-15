@@ -6,21 +6,22 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
     .then(users => {
         for (const user of users) {
-            const div = document.createElement('div');
-            div.classList.add('user')
+            const div_1 = document.createElement('div');
+            div_1.classList.add('user')
 
             const p = document.createElement('p');
             p.innerText = user.name + ', ID: ' + user.id
 
             const a = document.createElement('a');
             a.href = 'user-details.html?data=' + JSON.stringify(user);
+            a.target = '_blank';
 
             const button = document.createElement('button');
             button.innerText = 'More info about the User'
 
             a.appendChild(button)
-            div.append(p, a);
-            document.body.appendChild(div);
+            div_1.append(p, a);
+            document.body.appendChild(div_1);
         }
     })
 
@@ -29,7 +30,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 // 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
 // (для отримання постів використовуйте ендпоінт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
-//     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
+// 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
+//     котра має детальну інфу про поточний пост.
 //
 //     На сторінці post-details.html:
 // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
