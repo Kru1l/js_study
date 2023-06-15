@@ -1,0 +1,244 @@
+body {
+    font-family: 'Bruno Ace SC', cursive;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    background: black;
+}
+
+button {
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+/*---------------------------index.html---------------------------------*/
+/*index.html - всі блоки з user - по 2 в рядок. кнопки/посилання розташувати під інформацією про user.*/
+
+main {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.users {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 23px;
+
+    background: black;
+    color: #cdebff;
+    border-radius: 10px;
+    margin: 3% 0;
+}
+
+.users > p {
+    width: 80%;
+    text-align: center;
+}
+
+.users > a {
+    text-align: center;
+    width: 75%;
+    margin-top: 10px;
+}
+
+.go {
+    width: 100%;
+    height: 200%;
+
+    background: #cdebff;
+    transition: 1s;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.go:hover {
+    background: white;
+    transition: 1s;
+    font-size: 17px;
+}
+
+/*---------------------------user-details.html---------------------------------*/
+/*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижче, на 90% ширини сторінки, по центру.*/
+/*блоки з короткою іфною про post - в ряд по 5 .*/
+
+section {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    color: #cdebff;
+}
+
+.det {
+    width: 90%;
+}
+
+.clickPost {
+    width: 89vw;
+    height: 35px;
+
+    background: #cdebff;
+    transition: 1s;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 17px 0 15px;
+}
+
+.clickPost:hover {
+    background: white;
+    transition: 1s;
+    font-size: 17px;
+}
+
+.posts {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+
+#titl {
+    text-align: center;
+}
+
+.post {
+    width: 16vw;
+    height: 28vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin: 3% 0 2%;
+}
+
+.post > p {
+    width: 85%;
+    height: 40%;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+.post > a {
+    width: 80%;
+    height: 20%;
+}
+
+.post > a > button {
+    width: 100%;
+    height: 100%;
+
+    background: #cdebff;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    transition: 1s;
+}
+
+.post > a > button:hover {
+    background: black;
+    color: white;
+    transition: 1s;
+}
+
+h2 {
+    width: 100%;
+    margin-bottom: 3px;
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: solid 2px #cdebff;
+}
+
+li {
+    margin-bottom: 3px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/*---------------------------post-details.html---------------------------------*/
+/*post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/*Всі елементи, які характеризують users, posts, comments візуалізувати так, щоб було видно, що це блоки (дати фон. марджини і тд)*/
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #cdebff;
+}
+
+.postDet {
+    width: 90%;
+}
+
+.coms {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.com {
+    width: 25vw;
+    height: 52vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin: 3% 0 2%;
+    padding: 1% 0;
+}
+
+
+.com > p {
+    width: 80%;
+    text-align: justify;
+    margin: 1.5% 0;
+}
+
+#h2Com {
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+}

@@ -9,29 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Bruno Ace SC', cursive;
-        }
-        button {
-            font-family: 'Bruno Ace SC', cursive;
-        }
-
-        .par {
-            /*width: 60vw;*/
-            margin-bottom: 3px;
-            margin-left: 10px;
-            font-size: 25px;
-            font-weight: 600;
-            border-bottom: solid 2px black;
-        }
-
-        li {
-            margin-bottom: 3px;
-            font-size: 22px;
-            font-weight: 300;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -45,17 +23,20 @@
 
     let oData = JSON.parse(data);
 
+    let mainDiv = document.createElement('div');
+    mainDiv.classList.add('main');
+    document.body.appendChild(mainDiv);
+
     const div = document.createElement('div');
-    div.classList.add('det');
+    div.classList.add('postDet');
 
     const ul = document.createElement('ul');
     ul.classList.add('list');
 
-    const p = document.createElement('p');
-    p.classList.add('par');
-    p.innerText = 'Post Details:';
+    const h2 = document.createElement('h2');
+    h2.innerText = 'Post Details:';
 
-    div.append(p, ul);
+    div.append(h2, ul);
 
     const clearData = data.replace(/[{}"]/g, '').replace(/:/g, ': ').split(',');
 
@@ -65,23 +46,28 @@
         li.innerText = upLi;
         ul.appendChild(li);
     }
-    document.body.appendChild(div);
+    mainDiv.appendChild(div);
 
     // 8 Нижче інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+
+    const h2_1 = document.createElement('h2');
+    h2_1.setAttribute('id', 'h2Com');
+    h2_1.innerText = 'Comments:';
+
 
     let comments = new URL(`https://jsonplaceholder.typicode.com/posts/${oData.id}/comments`);
     fetch(comments)
         .then(res => res.json())
         .then(comments => {
-            // const ul = document.createElement('ul');
-            const p = document.createElement('p');
-            p.classList.add('par');
-            p.innerText = 'Comments:';
 
-            div.appendChild(p);
+            const comDiv = document.createElement('div');
+            comDiv.classList.add('coms');
+            mainDiv.appendChild(comDiv);
+            comDiv.appendChild(h2_1);
 
             for (const comment of comments) {
                 const div = document.createElement('div');
+                div.classList.add('com');
                 const sComment = JSON.stringify(comment);
                 const clearComment = sComment.replace(/[{}"]/g, '').replace(/:/g, ': ').split(',');
 
@@ -90,7 +76,7 @@
                     p.innerText = string.charAt(0).toUpperCase() + string.slice(1) + ';';
                     div.appendChild(p);
                 }
-                document.body.append(div);
+                comDiv.appendChild(div);
             }
         })
 </script>
