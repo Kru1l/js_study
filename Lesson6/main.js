@@ -61,9 +61,7 @@ console.log(text_2[2].toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 let str = ' dirty string   ';
-console.log(str.indexOf('d'));
-console.log(str.indexOf('g'));
-console.log(str.substring(1, 13));
+console.log(str.substring(str.indexOf('d'), str.indexOf('g') + 1));
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';

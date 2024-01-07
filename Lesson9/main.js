@@ -297,9 +297,9 @@ for (const course of coursesArray) {
     let list = document.createElement('ul');
     modulesDiv.appendChild(list);
 
-    for (const item of course.modules) {
+    for (const module of course.modules) {
         let li = document.createElement('li');
-        li.innerText = item;
+        li.innerText = module;
         list.appendChild(li);
     }
 

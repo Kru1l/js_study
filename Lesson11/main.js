@@ -194,37 +194,37 @@
 //         }, 1000)
 //     })
 
-// let age = 15;
-// new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         console.log(age);
-//         resolve(age);
-//     }, 1000)
-// })
-//     .then(value => {
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
-//                 value++;
-//                 console.log(value);
-//                 if (value >= 18) {
-//                     resolve(value);
-//                 } else {
-//                     reject('Problems');
-//                 }
-//             }, 1000)
-//
-//         })
-//     })
-//     .then(value => {
-//         return new Promise(resolve => {
-//             setTimeout(() => {
-//                 value++;
-//                 console.log(value);
-//                 resolve(value);
-//             })
-//         })
-//     })
-//     .catch(reason => console.log(reason));
+let age = 20;
+new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log(age);
+        resolve(age);
+    }, 1000)
+})
+    .then(value => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                value++;
+                console.log(value);
+                if (value >= 18) {
+                    resolve(value);
+                } else {
+                    reject('Problems');
+                }
+            }, 1000)
+
+        })
+    })
+    .then(value => {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                value++;
+                console.log(value);
+                resolve(value);
+            })
+        })
+    })
+    .catch(reason => console.log(reason));
 
 // fetch('https://jsonplaceholder.typicode.com/users')
 //     .then(res => res.json())
@@ -249,7 +249,8 @@
 // const todos = fetch('https://jsonplaceholder.typicode.com/todos')
 //     .then(res => res.json());
 //
-// Promise.all([users, todos]).then(result => {
+// Promise.all([users, todos])
+//     .then(result => {
 //     let [users, todos] = result;
 //     // console.log(result)
 //     for (const user of users) {
@@ -263,18 +264,20 @@
 //     console.log(users)
 // })
 
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(res => res.json())
-//     .then(users => {
-//         for (const user of users) {
-//             fetch('https://jsonplaceholder.typicode.com/todos?userId=' + user.id)
-//                 .then(res => res.json())
-//                 .then(userTodos => {
-//                     user.todos = userTodos;
-//                 })
-//             console.log(user)
-//         }
-//     })
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(users => {
+        for (const user of users) {
+            console.log(user)
+
+            fetch('https://jsonplaceholder.typicode.com/todos?userId=' + user.id)
+                .then(res => res.json())
+                .then(userTodos => {
+                    user.todos = userTodos;
+                })
+            console.log(user)
+        }
+    })
 
 
 

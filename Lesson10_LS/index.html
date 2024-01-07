@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson10_LS</title>
+</head>
+<style>
+    .block {
+        width: 200px;
+        height: 100px;
+        background: rgba(227, 164, 28);
+    }
+    /*div > img {*/
+    /*    width: 200px;*/
+    /*}*/
+
+    /*div > button {*/
+    /*    display: block;*/
+    /*    width: 200px;*/
+    /*}*/
+
+    form {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+    form > input {
+        margin-bottom: 12px;
+    }
+</style>
+<body>
+
+<form name="f1">
+    <input type="text" name="userName" placeholder="Name">
+    <input type="text" name="surname" placeholder="Surname">
+    <input type="text" name="age" placeholder="Age">
+    <button type="submit">Save</button>
+</form>
+<script src="main.js"></script>
+
+<form name="f2" style="display: flex; flex-direction: row">
+    <button id="prev" disabled style="width: 300px; margin-right: 10px">Prev</button>
+    <button id="next" style="width: 300px; margin-right: 10px">Next</button>
+</form>
+
+</body>
+</html>

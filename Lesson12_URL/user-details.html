@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Details</title>
+</head>
+<body>
+<script>
+    const url = new URL(location.href);
+    const userId = url.searchParams.get('id');
+
+    const userDetails = document.createElement('div');
+    document.body.appendChild(userDetails);
+
+    fetch(`http://jsonplaceholder.typicode.com/users/${userId}`)
+    // fetch(`http://jsonplaceholder.typicode.com/users?id=${userId}`)
+        .then(res => res.json())
+        .then(user => {
+            const {id, name, username, phone, website} = user;
+            const pId = document.createElement('p');
+            pId.innerText = `User ID: ${id}`
+            const pName = document.createElement('p');
+            pName.innerText = `Name: ${name}`
+            const pUsername = document.createElement('p');
+            pUsername.innerText = `Username: ${username}`
+            const pPhone = document.createElement('p');
+            pPhone.innerText = `Phone: ${phone}`
+            const pWebsite = document.createElement('p');
+            pWebsite.innerText = `Website: ${website}`;
+
+            userDetails.append(pId, pName, pUsername, pPhone, pWebsite);
+        })
+</script>
+</body>
+</html>
